@@ -2,10 +2,23 @@
 
 require_once("config.php");
 
-$sql = new Sql();
+//Carrega um usuario
+//$futebol = new Usuario();
+//$futebol->loadById(2);
+//echo $futebol;
 
-$usuarios = $sql->select("SELECT * FROM tb_usuarios");
+//Carrega uma lista de usuarios
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-echo json_encode($usuarios);
+//CArrega uma lista Usuarios buscando pelo login
+//$search = Usuario::search("l");
+//echo json_encode($search);
+
+//CArrega um usuarios usando o login e a senha
+$usuario = new Usuario();
+$usuario->login("user","123456");
+
+echo $usuario;
 
 ?>
